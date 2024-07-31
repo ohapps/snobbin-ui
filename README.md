@@ -34,3 +34,42 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Tasks
+
+- [x] add alert snackbars
+- [x] create group
+- [x] edit group
+- [x] delete group
+- [x] create item
+- [x] edit item
+- [x] delete item
+- [x] rank item
+- [x] display other group member rankings
+- [x] only show group/item edit menus for group admins
+- [x] add ability to modify profile
+- [x] show group members on group card
+- [x] add auto logout when session expires
+- [x] invite users to join group
+- [x] add meta data to ranking items
+- [x] scrape brewgene and import data into test app
+- [x] add group search
+- [x] upload brewgene data
+- [x] fix performance issues with large data set
+- [ ] deploy to hosting platform
+- [ ] add sort
+- [ ] add image upload
+- [ ] add database foreign keys
+- [ ] research react form library
+- [ ] auto generate GraphQL types on backend and frontend
+- [ ] setup email service for invite notifications
+- [ ] convert to a mobile web app with offline capabilities
+
+Deployment Options
+
+- UI
+  - Vercel
+  - Coolify
+- API
+  - Google Cloud Run
+  - Coolify
