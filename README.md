@@ -73,3 +73,6 @@ Deployment Options
 - API
   - Google Cloud Run
   - Coolify
+- Database
+  - Supabase
+  - Self host Postgres
