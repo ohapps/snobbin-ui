@@ -1,12 +1,12 @@
 'use client';
 
-import PageInitializer from '@/app/_common/components/Page/PageInitializer';
-import { MY_GROUPS } from '@/app/_common/graphql/queries';
-import { MyGroups } from '@/app/_common/types/group';
+import PageInitializer from '@/components/Page/PageInitializer';
+import { MY_GROUPS } from '@/graphql/queries';
+import { MyGroups } from '@/types/group';
 import { useQuery } from '@apollo/client';
-import GroupDetails from './GroupDetails';
-import GroupDetailsHeader from './GroupDetailsHeader';
-import ItemDrawer from './ItemDrawer';
+import GroupDetails from '../../../components/Group/GroupDetails';
+import GroupDetailsHeader from '../../../components/Group/GroupDetailsHeader';
+import ItemDrawer from '../../../components/GroupItem/ItemDrawer';
 
 const GroupPage = ({ params }: { params: { groupId: string } }) => {
   const { loading, error, data } = useQuery<MyGroups>(MY_GROUPS);

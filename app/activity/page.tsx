@@ -1,5 +1,5 @@
 import { Grid } from '@mui/material';
-import PendingInvites from './PendingInvites';
+import PendingInvites from '../../components/Activity/PendingInvites';
 
 const ActivityPage = () => {
   return (

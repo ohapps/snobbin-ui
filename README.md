@@ -56,23 +56,12 @@ Tasks
 - [x] add group search
 - [x] upload brewgene data
 - [x] fix performance issues with large data set
-- [ ] deploy to hosting platform
-- [ ] add sort
+- [x] deploy to hosting platform
+- [x] add sort
+- [ ] ui cleanup and fix mobile view
 - [ ] add image upload
 - [ ] add database foreign keys
 - [ ] research react form library
 - [ ] auto generate GraphQL types on backend and frontend
 - [ ] setup email service for invite notifications
 - [ ] convert to a mobile web app with offline capabilities
-
-Deployment Options
-
-- UI
-  - Vercel
-  - Coolify
-- API
-  - Google Cloud Run
-  - Coolify
-- Database
-  - Supabase
-  - Self host Postgres

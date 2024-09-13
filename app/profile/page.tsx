@@ -1,11 +1,11 @@
 'use client';
 
 import { useQuery } from '@apollo/client';
-import { UserInfo } from '../_common/types/snob';
-import { USER_INFO } from '../_common/graphql/queries';
-import PageInitializer from '../_common/components/Page/PageInitializer';
-import PageTitle from '../_common/components/Page/PageTitle';
-import EditProfileForm from './EditProfileForm';
+import { UserInfo } from '../../types/snob';
+import { USER_INFO } from '../../graphql/queries';
+import PageInitializer from '../../components/Page/PageInitializer';
+import PageTitle from '../../components/Page/PageTitle';
+import EditProfileForm from '../../components/Profile/EditProfileForm';
 import { Box, styled } from '@mui/material';
 
 const Container = styled(Box)(({ theme }) => ({
