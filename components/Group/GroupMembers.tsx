@@ -26,7 +26,7 @@ const GroupMembers = ({ group }: { group: Group }) => {
         </AccordionSummary>
         <AccordionDetails>
           {group.groupMembers.map((member) => (
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Box key={member.id} sx={{ display: 'flex', alignItems: 'center' }}>
               <Avatar sx={{ width: 30, height: 30 }}>
                 <PersonIcon />
               </Avatar>

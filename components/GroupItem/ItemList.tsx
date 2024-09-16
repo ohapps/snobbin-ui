@@ -10,6 +10,7 @@ import { useState } from 'react';
 import ItemListPage from './ItemListPage';
 import { editingRankingItem } from '@/apollo/reactiveVariables';
 import ItemListSort from './ItemListSort';
+import { sign } from 'crypto';
 
 const NewItemButton = styled(Button)(({ theme }) => ({
   fontSize: 12,
@@ -40,7 +41,15 @@ const ItemList = ({ group }: { group: Group }) => {
   return (
     <Box>
       <Grid container>
-        <Grid item md={6} xs={12} display={'flex'} alignItems={'center'}>
+        <Grid
+          item
+          md={6}
+          xs={12}
+          display={'flex'}
+          sx={{ justifyContent: { xs: 'flex-end', md: 'flex-start' } }}
+          alignItems={'center'}
+          paddingBottom={2}
+        >
           <ItemListSort
             total={total}
             sortBy={sortBy}

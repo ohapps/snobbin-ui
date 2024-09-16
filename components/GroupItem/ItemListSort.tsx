@@ -1,6 +1,6 @@
 import { RankingItemSortDirection, RankingItemSoryBy } from '@/types/group';
 import { enumToDisplay } from '@/utils/misc';
-import { Chip, Menu, MenuItem } from '@mui/material';
+import { Button, Menu, MenuItem } from '@mui/material';
 import { useState } from 'react';
 
 const ItemListSort = ({
@@ -33,18 +33,18 @@ const ItemListSort = ({
   };
 
   return (
-    <div>
-      <Chip
+    <>
+      <Button
         id="sort-button"
         aria-controls={open ? 'sort-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
-        sx={{ fontSize: '16px' }}
-        label={`${total.toLocaleString()} items sorted by ${enumToDisplay(
-          sortBy
-        )} ${enumToDisplay(sortDirection)}`}
-      />
+        variant="outlined"
+      >
+        {total.toLocaleString()} items sorted by {enumToDisplay(sortBy)}{' '}
+        {enumToDisplay(sortDirection)}
+      </Button>
       <Menu
         id="sort-menu"
         anchorEl={anchorEl}
@@ -95,7 +95,7 @@ const ItemListSort = ({
           sort by average ranking desc
         </MenuItem>
       </Menu>
-    </div>
+    </>
   );
 };
 
