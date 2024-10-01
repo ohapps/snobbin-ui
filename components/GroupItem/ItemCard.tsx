@@ -17,6 +17,8 @@ import { useState } from 'react';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import useCurrentGroupMember from '@/hooks/useCurrentGroupMember';
 import ItemCardMenu from './ItemCardMenu';
+import ImagePreview from '../Image/ImagePreview';
+import { getImageOrPlaceholder, placeholderImage } from '@/types/image';
 
 export const Card = styled(MuiCard)(({ theme }) => ({
   backgroundColor: theme.palette.grey[200],
@@ -74,13 +76,7 @@ const ItemCard = ({ group, item }: { group: Group; item: RankingItem }) => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Title>{item.description}</Title>
-          <Image
-            width={125}
-            height={125}
-            src="/beer_placeholder.jpg"
-            alt="item image placeholder"
-            style={{ border: `1px solid ${theme.palette.grey[400]}` }}
-          />
+          <ImagePreview image={getImageOrPlaceholder(item)} />
         </Grid>
         <Grid item xs={12} md={6}>
           <ItemRating group={group} item={item} />

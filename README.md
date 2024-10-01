@@ -58,10 +58,11 @@ Tasks
 - [x] fix performance issues with large data set
 - [x] deploy to hosting platform
 - [x] add sort
-- [ ] ui cleanup and fix mobile view
-- [ ] add image upload
+- [x] ui cleanup and fix mobile view
+- [x] add image upload
+- [ ] add support for auto complete when entering attributes
 - [ ] add database foreign keys
-- [ ] research react form library
+- [ ] research react form library and yup form validation
 - [ ] auto generate GraphQL types on backend and frontend
 - [ ] setup email service for invite notifications
 - [ ] convert to a mobile web app with offline capabilities

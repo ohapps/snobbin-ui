@@ -64,11 +64,13 @@ mutation deleteGroup($id: String!) {
 `;
 
 export const CREATE_RANKING_ITEM = gql`
-mutation createRankingItem($groupId: String!, $description: String!, $attributes: [RankingItemAttributeUpdate]!) {
+mutation createRankingItem($groupId: String!, $description: String!, $imageId: String, $imageUrl: String, $attributes: [RankingItemAttributeUpdate]!) {
 	createRankingItem(
 		groupId: $groupId,
 		rankingItemUpdate: {
 			description: $description
+			imageId: $imageId
+			imageUrl: $imageUrl
 			attributes: $attributes
 		}
 	) {
@@ -80,11 +82,13 @@ mutation createRankingItem($groupId: String!, $description: String!, $attributes
 `;
 
 export const UPDATE_RANKING_ITEM = gql`
-mutation updateRankingItem($id: String!, $description: String!, $attributes: [RankingItemAttributeUpdate]!) {
+mutation updateRankingItem($id: String!, $description: String!, $imageId: String, $imageUrl: String, $attributes: [RankingItemAttributeUpdate]!) {
 	updateRankingItem(
 		id: $id,
 		rankingItemUpdate: {
 			description: $description
+			imageId: $imageId
+			imageUrl: $imageUrl
 			attributes: $attributes
 		}
 	) {

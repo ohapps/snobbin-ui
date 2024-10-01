@@ -11,6 +11,8 @@ export interface RankingItem {
     description: string;
     averageRanking: number;
     ranked: boolean;
+    imageId?: string;
+    imageUrl?: string;
     attributes: RankingItemAttribute[];
 }
 

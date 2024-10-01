@@ -12,7 +12,7 @@ import PageContainer from '../components/Page/PageContainer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Snobbin - v1.0.2',
+  title: 'Snobbin',
   description: 'Snobbin is a group ranking application',
 };
 

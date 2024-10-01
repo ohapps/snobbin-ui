@@ -6,6 +6,8 @@ import { useMutation } from '@apollo/client';
 import { Grid, TextField, styled } from '@mui/material';
 import { useSnackbar } from 'notistack';
 import { useState } from 'react';
+import ImageUploadButton from '../Image/ImageUploadButton';
+import { getImageOrPlaceholder } from '@/types/image';
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   marginTop: '10px',
@@ -34,6 +36,7 @@ const ItemForm = ({
       attributeValue: attr.attributeValue,
     })) ?? []
   );
+  const [image, setImage] = useState(getImageOrPlaceholder(rankingItem));
   const isItemValid = description;
 
   const onCompleted = () => {
@@ -53,6 +56,8 @@ const ItemForm = ({
             id: rankingItem.id,
             description,
             attributes,
+            imageId: image.publicId,
+            imageUrl: image.url,
           },
           refetchQueries: [MY_GROUPS, SEARCH_RANKING_ITEMS],
           onCompleted,
@@ -64,6 +69,8 @@ const ItemForm = ({
             groupId: rankingGroup.id,
             description,
             attributes,
+            imageId: image.publicId,
+            imageUrl: image.url,
           },
           refetchQueries: [MY_GROUPS, SEARCH_RANKING_ITEMS],
           onCompleted,
@@ -130,6 +137,9 @@ const ItemForm = ({
           />
         </Grid>
       ))}
+      <Grid item xs={12} md={6}>
+        <ImageUploadButton image={image} setImage={setImage} />
+      </Grid>
       <Grid item xs={12}>
         <FullActionButton
           loading={createLoading || updateLoading}

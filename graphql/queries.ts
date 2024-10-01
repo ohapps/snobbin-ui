@@ -70,7 +70,9 @@ query searchRankingItems(
 			groupId
 			description
 			ranked
-			averageRanking	
+			averageRanking
+			imageId
+			imageUrl
 			attributes {
 				id
 				attributeId
